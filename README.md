@@ -1,12 +1,11 @@
-Here is your updated code with concise 3-to-5-word comments added throughout:
-# Display main program banner
+# Display main program 
 print("==========================================================")
-print("************🐍 PYTHON LEARNING COMPANION 🐍*************")
+print("*************  PYTHON LEARNING COMPANION *************    ")
 print("==========================================================")
 print("      Complete Study & Quiz System (Prelim - Finals)      ")
 print("==========================================================")
 
-# Set default learner name
+# default learner name
 learner_name = "Learner"
 
 # Start main menu loop
@@ -15,17 +14,17 @@ while True:
     print(f"WELCOME, {learner_name}!")
     print("----------------------------------------------------------")
     print("MAIN MENU:")
-    print("  [1] Prelim Module  (Ch. 1-4: Intro, Syntax, Vars, Types, Ops, I/O)")
+    print("  [1] Prelim Module  ( Intro, Syntax, Vars, Types, Ops, I/O)")
     print("  [2] Midterm Module (Conditionals, Nested If, Relational & Logical Ops)")
     print("  [3] Finals Module  (Iteration, for Loop, range(), while & break)")
     print("  [4] Take Final 20-Item Comprehensive Quiz (All Lessons)")
     print("  [5] Exit System")
     print("==========================================================")
 
-    # Get user menu selection
-    main_menu_choice = input("Choose an option (1-5): ").strip()
+    # user menu selection
+    main_menu_choice = input("Choose an option (1-5): ")
 
-    # Handle Prelim module navigation
+    # Handle Prelim module 
     if main_menu_choice == "1":
         prelim_page = 1
 
@@ -75,7 +74,7 @@ while True:
                 print("\nNext Action:")
                 print("  [1] Continue to Page 2 (Syntax, Print & Comments)")
                 print("  [2] Return to Main Menu")
-                step_p1 = input("Select (1-2): ").strip()
+                step_p1 = input("Select (1-2): ")
 
                 if step_p1 == "1":
                     prelim_page = 2
@@ -160,7 +159,7 @@ while True:
                 print("\nNext Action:")
                 print("  [1] Continue to Page 3 (Variables, Naming Rules & Output)")
                 print("  [2] Return to Main Menu")
-                step_p2 = input("Select (1-2): ").strip()
+                step_p2 = input("Select (1-2): ")
 
                 if step_p2 == "1":
                     prelim_page = 3
@@ -219,7 +218,7 @@ while True:
                 print("\nNext Action:")
                 print("  [1] Continue to Page 4 (Basic Data Types)")
                 print("  [2] Return to Main Menu")
-                step_p3 = input("Select (1-2): ").strip()
+                step_p3 = input("Select (1-2): ")
 
                 if step_p3 == "1":
                     prelim_page = 4
@@ -322,7 +321,7 @@ while True:
                 input("Press Enter to return to Main Menu...")
                 break
 
-    # Handle Midterm module navigation
+    # Handle Midterm module 
     elif main_menu_choice == "2":
         midterm_page = 1
 
@@ -395,7 +394,7 @@ while True:
                 print("\nNext Action:")
                 print("  [1] Continue to Page 2 (Nested Condition in Python)")
                 print("  [2] Return to Main Menu")
-                step_m1 = input("Select (1-2): ").strip()
+                step_m1 = input("Select (1-2): ")
 
                 if step_m1 == "1":
                     midterm_page = 2
@@ -440,7 +439,7 @@ while True:
                 print("\nNext Action:")
                 print("  [1] Continue to Page 3 (Logical Operators & Truth Tables)")
                 print("  [2] Return to Main Menu")
-                step_m2 = input("Select (1-2): ").strip()
+                step_m2 = input("Select (1-2): ")
 
                 if step_m2 == "1":
                     midterm_page = 3
@@ -499,7 +498,7 @@ while True:
                 input("Press Enter to return to Main Menu...")
                 break
 
-    # Handle Finals module navigation
+    # Handle Finals module 
     elif main_menu_choice == "3":
         finals_page = 1
 
@@ -585,36 +584,36 @@ while True:
                 input("Press Enter to return to Main Menu...")
                 break
 
-    # Run 20-item comprehensive quiz
+    # Run 20-item  quiz
     elif main_menu_choice == "4":
         print("\n==========================================================")
-        print("      COMPREHENSIVE PYTHON QUIZ (20 ITEMS - ALL LESSONS)  ")
+        print("     PYTHON QUIZ (20 ITEMS - ALL LESSONS)  ")
         print("==========================================================")
         print("Instructions: Type the letter of your choice (a, b, or c).")
         print("----------------------------------------------------------")
 
-        # Initialize quiz score counter
+        # quiz score counter
         quiz_score = 0
 
-        # Ask quiz questions 1-20
+        # quiz questions 1-20
         print("\n1. Who created the Python programming language in 1991?")
         print("   a) James Gosling   b) Guido van Rossum   c) Bjarne Stroustrup")
-        if input("   Answer: ").strip().lower() == "b":
+        if input("   Answer: ").lower() == "b":
             quiz_score += 1
 
         print("\n2. Which programming language is described as 'The language of the web; adds interactivity to websites'?")
         print("   a) JavaScript   b) C++   c) Ruby")
-        if input("   Answer: ").strip().lower() == "a":
+        if input("   Answer: ").lower() == "a":
             quiz_score += 1
 
         print("\n3. Why does print(Name) cause an error if the variable was created as name = \"John\"?")
         print("   a) Missing quotes   b) Python is case-sensitive   c) Wrong indentation")
-        if input("   Answer: ").strip().lower() == "b":
+        if input("   Answer: ").lower() == "b":
             quiz_score += 1
 
         print("\n4. Which symbol is used to start a single-line comment in Python?")
         print("   a) //   b) /*   c) #")
-        if input("   Answer: ").strip().lower() == "c":
+        if input("   Answer: ").lower() == "c":
             quiz_score += 1
 
         print("\n5. Which of the following is a VALID variable name in Python?")
@@ -624,77 +623,77 @@ while True:
 
         print("\n6. What is the data type of the value 89.5?")
         print("   a) int   b) str   c) float")
-        if input("   Answer: ").strip().lower() == "c":
+        if input("   Answer: ").lower() == "c":
             quiz_score += 1
 
         print("\n7. What is the result of the floor division expression 17 // 3?")
         print("   a) 5   b) 5.66   c) 2")
-        if input("   Answer: ").strip().lower() == "a":
+        if input("   Answer: ").lower() == "a":
             quiz_score += 1
 
         print("\n8. According to PEMDAS, which operation is evaluated FIRST in Python?")
         print("   a) Multiplication   b) Addition   c) Parentheses")
-        if input("   Answer: ").strip().lower() == "c":
+        if input("   Answer: ").lower() == "c":
             quiz_score += 1
 
         print("\n9. What type of value do relational operators (==, !=, >, <, >=, <=) always return?")
         print("   a) Integer   b) String   c) True or False")
-        if input("   Answer: ").strip().lower() == "c":
+        if input("   Answer: ").lower() == "c":
             quiz_score += 1
 
         print("\n10. In an if-elif-else structure, what happens if multiple conditions are True?")
         print("   a) Only the FIRST True block runs   b) All True blocks run   c) The else block runs")
-        if input("   Answer: ").strip().lower() == "a":
+        if input("   Answer: ").lower() == "a":
             quiz_score += 1
 
         print("\n11. When is the inner condition inside a nested 'if' statement checked?")
         print("   a) Always   b) Only if the outer condition is True   c) Only if the outer condition is False")
-        if input("   Answer: ").strip().lower() == "b":
+        if input("   Answer: ").lower() == "b":
             quiz_score += 1
 
         print("\n12. Which logical operator returns True ONLY when ALL conditions are True?")
         print("   a) or   b) not   c) and")
-        if input("   Answer: ").strip().lower() == "c":
+        if input("   Answer: ").lower() == "c":
             quiz_score += 1
 
         print("\n13. What is the result of: True or False?")
         print("   a) True   b) False   c) None")
-        if input("   Answer: ").strip().lower() == "a":
+        if input("   Answer: ").lower() == "a":
             quiz_score += 1
 
         print("\n14. If is_raining = False, what does 'not is_raining' evaluate to?")
         print("   a) False   b) True   c) Error")
-        if input("   Answer: ").strip().lower() == "b":
+        if input("   Answer: ").lower() == "b":
             quiz_score += 1
 
         print("\n15. In programming, what is each single repetition of a loop called?")
         print("   a) iteration   b) indentation   c) concatenation")
-        if input("   Answer: ").strip().lower() == "a":
+        if input("   Answer: ").lower() == "a":
             quiz_score += 1
 
         print("\n16. Which loop is best used when the number of repetitions is already known?")
         print("   a) while loop   b) for loop   c) if-else")
-        if input("   Answer: ").strip().lower() == "b":
+        if input("   Answer: ").lower() == "b":
             quiz_score += 1
 
         print("\n17. What numbers are printed by: for number in range(1, 6): print(number)?")
         print("   a) 1, 2, 3, 4, 5, 6   b) 0, 1, 2, 3, 4, 5   c) 1, 2, 3, 4, 5")
-        if input("   Answer: ").strip().lower() == "c":
+        if input("   Answer: ").lower() == "c":
             quiz_score += 1
 
         print("\n18. What is the first number printed by: for number in range(5, 0, -1)?")
         print("   a) 5   b) 0   c) -1")
-        if input("   Answer: ").strip().lower() == "a":
+        if input("   Answer: ").lower() == "a":
             quiz_score += 1
 
         print("\n19. In a while loop with 'count = 1' and 'while count <= 5:', at what value of count does the loop stop?")
         print("   a) 5   b) 6   c) 0")
-        if input("   Answer: ").strip().lower() == "b":
+        if input("   Answer: ").lower() == "b":
             quiz_score += 1
 
         print("\n20. Which keyword is used to immediately stop a 'while True' loop when the user enters 'X'?")
         print("   a) stop   b) exit   c) break")
-        if input("   Answer: ").strip().lower() == "c":
+        if input("   Answer: ").lower() == "c":
             quiz_score += 1
 
         # Display final quiz results
