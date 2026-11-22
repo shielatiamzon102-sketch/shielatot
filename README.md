@@ -1,27 +1,36 @@
+Here is your updated code with concise 3-to-5-word comments added throughout:
+# Display main program banner
 print("==========================================================")
-print("************ PYTHON LEARNING TUTORIAL *************")
+print("************🐍 PYTHON LEARNING COMPANION 🐍*************")
+print("==========================================================")
+print("      Complete Study & Quiz System (Prelim - Finals)      ")
 print("==========================================================")
 
-student_name = "Learner"
+# Set default learner name
+learner_name = "Learner"
 
+# Start main menu loop
 while True:
     print("\n==========================================================")
-    print(f"WELCOME, {student_name}!")
+    print(f"WELCOME, {learner_name}!")
     print("----------------------------------------------------------")
     print("MAIN MENU:")
-    print("  [1] Prelim Lesson (: Intro, Syntax, Vars, Types, Ops,)")
-    print("  [2] Midterm Lesson (Conditionals, Nested If, Relational & Logical Ops)")
-    print("  [3] Finals Lesson  (Iteration, for Loop, range(), while & break)")
-    print("  [4] Take Final 20-Item Quiz (All Lessons)")
+    print("  [1] Prelim Module  (Ch. 1-4: Intro, Syntax, Vars, Types, Ops, I/O)")
+    print("  [2] Midterm Module (Conditionals, Nested If, Relational & Logical Ops)")
+    print("  [3] Finals Module  (Iteration, for Loop, range(), while & break)")
+    print("  [4] Take Final 20-Item Comprehensive Quiz (All Lessons)")
     print("  [5] Exit System")
     print("==========================================================")
 
+    # Get user menu selection
     main_menu_choice = input("Choose an option (1-5): ").strip()
 
+    # Handle Prelim module navigation
     if main_menu_choice == "1":
         prelim_page = 1
 
         while True:
+            # Show Prelim Page 1
             if prelim_page == 1:
                 print("\n----------------------------------------------------------")
                 print("PRELIM - PAGE 1: CHAPTER 1 - INTRODUCTION TO PROGRAMMING")
@@ -73,6 +82,7 @@ while True:
                 else:
                     break
 
+            # Show Prelim Page 2
             elif prelim_page == 2:
                 print("\n----------------------------------------------------------")
                 print("PRELIM - PAGE 2: CHAPTER 2 - SYNTAX, PRINT & COMMENTS")
@@ -157,6 +167,7 @@ while True:
                 else:
                     break
 
+            # Show Prelim Page 3
             elif prelim_page == 3:
                 print("\n----------------------------------------------------------")
                 print("PRELIM - PAGE 3: VARIABLES, NAMING RULES & OUTPUT")
@@ -215,6 +226,7 @@ while True:
                 else:
                     break
 
+            # Show Prelim Page 4
             elif prelim_page == 4:
                 print("\n----------------------------------------------------------")
                 print("PRELIM - PAGE 4: BASIC DATA TYPES IN PYTHON")
@@ -255,6 +267,7 @@ while True:
                 else:
                     break
 
+            # Show Prelim Page 5
             elif prelim_page == 5:
                 print("\n----------------------------------------------------------")
                 print("PRELIM - PAGE 5: CH. 3 OPERATORS/PEMDAS & CH. 4 INPUT/OUTPUT")
@@ -306,14 +319,15 @@ while True:
                 print("\n==========================================================")
                 print("YOU HAVE FINISHED THE PRELIM MODULE!")
                 print("==========================================================")
-                print("  [1] Return to Main Menu (then choose Midterm or Quiz)")
                 input("Press Enter to return to Main Menu...")
                 break
 
+    # Handle Midterm module navigation
     elif main_menu_choice == "2":
         midterm_page = 1
 
         while True:
+            # Show Midterm Page 1
             if midterm_page == 1:
                 print("\n----------------------------------------------------------")
                 print("MIDTERM - PAGE 1: CONDITIONALS & RELATIONAL OPERATORS")
@@ -388,6 +402,7 @@ while True:
                 else:
                     break
 
+            # Show Midterm Page 2
             elif midterm_page == 2:
                 print("\n----------------------------------------------------------")
                 print("MIDTERM - PAGE 2: NESTED CONDITION IN PYTHON")
@@ -432,6 +447,7 @@ while True:
                 else:
                     break
 
+            # Show Midterm Page 3
             elif midterm_page == 3:
                 print("\n----------------------------------------------------------")
                 print("MIDTERM - PAGE 3: LOGICAL OPERATORS & TRUTH TABLES")
@@ -461,9 +477,9 @@ while True:
                 print("  | EXAMPLE:                                               |")
                 print('  |   day = "Saturday"                                     |')
                 print('  |   if day == "Saturday" or day == "Sunday":             |')
-                print('  |       print("Its the weekend!")                       |')
+                print('  |       print("It\'s the weekend!")                       |')
                 print("  |   else:                                                |")
-                print('  |       print("Its a regular school day.")               |')
+                print('  |       print("It\'s a regular school day.")               |')
                 print("  +--------------------------------------------------------+")
                 print("• The not Operator (NOT = BALIKTARIN ANG RESULT):")
                 print("  - Reverses the result of a condition.")
@@ -483,10 +499,12 @@ while True:
                 input("Press Enter to return to Main Menu...")
                 break
 
+    # Handle Finals module navigation
     elif main_menu_choice == "3":
         finals_page = 1
 
         while True:
+            # Show Finals Page 1
             if finals_page == 1:
                 print("\n----------------------------------------------------------")
                 print("FINALS - PAGE 1: ITERATION & PYTHON FOR LOOP")
@@ -535,6 +553,7 @@ while True:
                 else:
                     break
 
+            # Show Finals Page 2
             elif finals_page == 2:
                 print("\n----------------------------------------------------------")
                 print("FINALS - PAGE 2: WHILE LOOP & WHILE TRUE")
@@ -566,6 +585,7 @@ while True:
                 input("Press Enter to return to Main Menu...")
                 break
 
+    # Run 20-item comprehensive quiz
     elif main_menu_choice == "4":
         print("\n==========================================================")
         print("      COMPREHENSIVE PYTHON QUIZ (20 ITEMS - ALL LESSONS)  ")
@@ -573,8 +593,10 @@ while True:
         print("Instructions: Type the letter of your choice (a, b, or c).")
         print("----------------------------------------------------------")
 
+        # Initialize quiz score counter
         quiz_score = 0
 
+        # Ask quiz questions 1-20
         print("\n1. Who created the Python programming language in 1991?")
         print("   a) James Gosling   b) Guido van Rossum   c) Bjarne Stroustrup")
         if input("   Answer: ").strip().lower() == "b":
@@ -675,24 +697,27 @@ while True:
         if input("   Answer: ").strip().lower() == "c":
             quiz_score += 1
 
+        # Display final quiz results
         print("\n==========================================================")
-        print(f"QUIZ COMPLETED! {student_name}, your score is: {quiz_score} / 20")
+        print(f"QUIZ COMPLETED! {learner_name}, your score is: {quiz_score} / 20")
         if quiz_score == 20:
-            print("REMARKS: PERFECT SCORE!")
+            print("REMARKS: PERFECT SCORE! Outstanding mastery of all lessons!")
         elif quiz_score >= 15:
-            print("REMARKS: PASSED WITH HONORS!")
+            print("REMARKS: PASSED WITH HONORS! Great job!")
         elif quiz_score >= 12:
-            print("REMARKS: PASSED! .")
+            print("REMARKS: PASSED! Good understanding of the lessons.")
         else:
             print("REMARKS: NEEDS REVIEW. Go back to the modules and try again!")
         print("==========================================================")
 
+    # Exit the program
     elif main_menu_choice == "5":
         print("\n==========================================================")
-        print(f"Thank you for studying, {student_name}! Happy coding!")
+        print(f"Thank you for studying, {learner_name}! Happy coding!")
         print("==========================================================")
         break
 
+    # Handle invalid menu input
     else:
         print("\nInvalid choice! Please select an option from 1 to 5.")
-    
+
