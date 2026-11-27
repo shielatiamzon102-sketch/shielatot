@@ -1,12 +1,13 @@
-# Display main program 
+# Display main program header
 print("==========================================================")
 print("*************  PYTHON LEARNING COMPANION *************    ")
 print("==========================================================")
 print("      Complete Study & Quiz System (Prelim - Finals)      ")
 print("==========================================================")
 
-# default learner name
-learner_name = "Learner"
+# Optional learner name setup
+entered_name = input("Enter your name (or press Enter for 'Learner'): ")
+learner_name = entered_name if entered_name else "Learner"
 
 # Start main menu loop
 while True:
@@ -21,15 +22,13 @@ while True:
     print("  [5] Exit System")
     print("==========================================================")
 
-    # user menu selection
     main_menu_choice = input("Choose an option (1-5): ")
 
-    # Handle Prelim module 
+    # Handle Prelim module
     if main_menu_choice == "1":
         prelim_page = 1
 
         while True:
-            # Show Prelim Page 1
             if prelim_page == 1:
                 print("\n----------------------------------------------------------")
                 print("PRELIM - PAGE 1: CHAPTER 1 - INTRODUCTION TO PROGRAMMING")
@@ -81,7 +80,6 @@ while True:
                 else:
                     break
 
-            # Show Prelim Page 2
             elif prelim_page == 2:
                 print("\n----------------------------------------------------------")
                 print("PRELIM - PAGE 2: CHAPTER 2 - SYNTAX, PRINT & COMMENTS")
@@ -166,7 +164,6 @@ while True:
                 else:
                     break
 
-            # Show Prelim Page 3
             elif prelim_page == 3:
                 print("\n----------------------------------------------------------")
                 print("PRELIM - PAGE 3: VARIABLES, NAMING RULES & OUTPUT")
@@ -225,7 +222,6 @@ while True:
                 else:
                     break
 
-            # Show Prelim Page 4
             elif prelim_page == 4:
                 print("\n----------------------------------------------------------")
                 print("PRELIM - PAGE 4: BASIC DATA TYPES IN PYTHON")
@@ -259,14 +255,13 @@ while True:
                 print("\nNext Action:")
                 print("  [1] Continue to Page 5 (Ch. 3 Operators/PEMDAS & Ch. 4 Input/Output)")
                 print("  [2] Return to Main Menu")
-                step_p4 = input("Select (1-2): ").strip()
+                step_p4 = input("Select (1-2): ")
 
                 if step_p4 == "1":
                     prelim_page = 5
                 else:
                     break
 
-            # Show Prelim Page 5
             elif prelim_page == 5:
                 print("\n----------------------------------------------------------")
                 print("PRELIM - PAGE 5: CH. 3 OPERATORS/PEMDAS & CH. 4 INPUT/OUTPUT")
@@ -321,12 +316,11 @@ while True:
                 input("Press Enter to return to Main Menu...")
                 break
 
-    # Handle Midterm module 
+    # Handle Midterm module
     elif main_menu_choice == "2":
         midterm_page = 1
 
         while True:
-            # Show Midterm Page 1
             if midterm_page == 1:
                 print("\n----------------------------------------------------------")
                 print("MIDTERM - PAGE 1: CONDITIONALS & RELATIONAL OPERATORS")
@@ -401,7 +395,6 @@ while True:
                 else:
                     break
 
-            # Show Midterm Page 2
             elif midterm_page == 2:
                 print("\n----------------------------------------------------------")
                 print("MIDTERM - PAGE 2: NESTED CONDITION IN PYTHON")
@@ -446,7 +439,6 @@ while True:
                 else:
                     break
 
-            # Show Midterm Page 3
             elif midterm_page == 3:
                 print("\n----------------------------------------------------------")
                 print("MIDTERM - PAGE 3: LOGICAL OPERATORS & TRUTH TABLES")
@@ -498,12 +490,11 @@ while True:
                 input("Press Enter to return to Main Menu...")
                 break
 
-    # Handle Finals module 
+    # Handle Finals module
     elif main_menu_choice == "3":
         finals_page = 1
 
         while True:
-            # Show Finals Page 1
             if finals_page == 1:
                 print("\n----------------------------------------------------------")
                 print("FINALS - PAGE 1: ITERATION & PYTHON FOR LOOP")
@@ -545,14 +536,13 @@ while True:
                 print("\nNext Action:")
                 print("  [1] Continue to Page 2 (while Loop & while True)")
                 print("  [2] Return to Main Menu")
-                step_f1 = input("Select (1-2): ").strip()
+                step_f1 = input("Select (1-2): ")
 
                 if step_f1 == "1":
                     finals_page = 2
                 else:
                     break
 
-            # Show Finals Page 2
             elif finals_page == 2:
                 print("\n----------------------------------------------------------")
                 print("FINALS - PAGE 2: WHILE LOOP & WHILE TRUE")
@@ -584,7 +574,7 @@ while True:
                 input("Press Enter to return to Main Menu...")
                 break
 
-    # Run 20-item  quiz
+    # Run 20-item quiz
     elif main_menu_choice == "4":
         print("\n==========================================================")
         print("     PYTHON QUIZ (20 ITEMS - ALL LESSONS)  ")
@@ -592,10 +582,8 @@ while True:
         print("Instructions: Type the letter of your choice (a, b, or c).")
         print("----------------------------------------------------------")
 
-        # quiz score counter
         quiz_score = 0
 
-        # quiz questions 1-20
         print("\n1. Who created the Python programming language in 1991?")
         print("   a) James Gosling   b) Guido van Rossum   c) Bjarne Stroustrup")
         if input("   Answer: ").lower() == "b":
@@ -618,7 +606,7 @@ while True:
 
         print("\n5. Which of the following is a VALID variable name in Python?")
         print("   a) 1stValue   b) _speed   c) space name")
-        if input("   Answer: ").strip().lower() == "b":
+        if input("   Answer: ").lower() == "b":
             quiz_score += 1
 
         print("\n6. What is the data type of the value 89.5?")
@@ -696,7 +684,6 @@ while True:
         if input("   Answer: ").lower() == "c":
             quiz_score += 1
 
-        # Display final quiz results
         print("\n==========================================================")
         print(f"QUIZ COMPLETED! {learner_name}, your score is: {quiz_score} / 20")
         if quiz_score == 20:
@@ -719,4 +706,3 @@ while True:
     # Handle invalid menu input
     else:
         print("\nInvalid choice! Please select an option from 1 to 5.")
-
